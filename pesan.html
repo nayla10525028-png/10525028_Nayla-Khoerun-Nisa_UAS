@@ -1,0 +1,153 @@
+<html>
+<head>
+<title> Payment - Petals and Perls </title>
+   <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <div class="header">
+     <h1>₍ᐢ. ̫ .ᐢ₎ PETALS AND PERLS  ₍ᐢ. ̫ .ᐢ₎ </h1>
+  </div>
+  
+  <div class="menu">
+   <a href="UAS.html">Informasi</a>
+   <a href="produk.html">Produk</a>
+   <a href="pesan.html">Check Out</a>
+   <a href="kontak.html">Kontak</a>
+   <a href="pesan.html#lokasi">Lokasi</a>
+  </div>
+  
+   <table width="100%">
+   <tr>
+       <td class="kiri">
+	      <h2>Kategori</h2>
+               <ul>
+                   <li>Gelang</li>
+	               <li>kalung</li>
+	               <li>Keychain</li>
+	               <li>Jepit Rambut</li>
+	               <li>Tas</li>
+	               <li>Dasi </li>
+	               <li>Crochet Cup Holder </li>
+	               <li>Dompet </li>
+	               <li>Lip Holder Keychain </li>
+	               <li>Crochet Ear-Pods Case </li>
+               </ul> <br> <hr> <br>
+  
+          <h2> Produk </h2>
+             <p>Gratis Ongkir Keseluruh Pulau Jawa minimal pembelian Rp300.000 </p>
+       </td>
+	   
+	   <td class="pesan">
+	      <table border=1 cellpadding=10 width="100%">
+		    <tr>
+			   <td align="center">
+			      <a name="Pesan">
+                      <font size=5>  Form Pemesanan Aksesoris </font> </a>  <br> <br>
+					     <form id="formpemesanan" onsubmit="return prosespemesanan(event)">
+	                     <table style="color: #FF6B6B;">
+		                    <tr><td>Nama Anda <td>: <input type="text" id="nama" name="nama" placeholder="Nama Lengkap">
+		                    <tr><td>Email     <td>: <input type="text" id="email" name="email" placeholder="email@domain.com">
+	                        <tr><td>No HP     <td>: <input type="text" id="noHP" name="noHP"  placeholder="08*********">
+	                        <tr><td>Proteksi Kerusakan <td>: <input type="checkbox" name="proteksi" value="Ya">Ya
+		                                                     <input type="checkbox" name="proteksi" value="Tidak">Tidak
+		                    <tr><td>Payment     <td>: <input type="radio" name="bayar" value="COD">COD
+		                                              <input type="radio" name="bayar" value="TF">Transfer Bank
+								                      <input type="radio" name="bayar" value="Qris">QRIS
+		                    <tr><td>Pengiriman <td> : <select size="1" id="paket" name="paket">
+		                                              <option> JNT</option>
+								                      <option> JNE </option>
+								                      <option> Chargo </option>
+								                      </select>
+		                    <tr><td>alamat<td>: <textarea id="alamat" name="pesan" cols="40" rows=4 placeholder="Masukan Alamat Anda"> </textarea>
+	                     </table>
+	                  <input type="submit" value="kirim"> <input type="reset" value="Reset"> 
+               </td>
+			</tr>
+          <br> <hr> <br>
+		  <tr>
+			   <td class="lokasi" align="center">
+			     <a name="lokasi">
+			           <font size=5>  Lokasi Petals and Perls </font> </a> <br> <br>
+		                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7777958316033!2d107.60666067356813!3d-6.917148093082416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e61895781f2b%3A0xfdec42a1cab3c3fa!2sBraga%20Citywalk!5e0!3m2!1sen!2sid!4v1779972109251!5m2!1sen!2sid" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	                      <br> <br> <font size=2> <b>Alamat: </b> Jl. Braga No.99-101, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111 </font>
+			              <br> <font size=2> <b> Jam Operasional: </b> Senin-Minggu (08.00-17.00) </font>
+	           </td>
+            </tr>
+          </table>
+        </td>
+		
+		<td class="kanan">
+	     <h2> Best Seller </h2>
+                <ol type=a>
+                   <li> Charm Bracelet </li>
+	               <li> Beaded Necklace </li>
+	               <li> Beaded Bracelet </li>
+	               <li> Sling Bag </li>
+	               <li> Crochet Ear-Pods Case </li>
+                </ol> <br> <hr> <br> 
+ 
+           <h2> Toko Online </h2>
+               <ol type=1>
+                   <li>Shoope : PerlsPearls</li>
+	               <li>Tiktok Shop : PerlsPearls</li>
+	               <li>Instagram : PerlsAndPearls </li>
+               </ol>	   
+			   
+			   <align="center"> <button onclick="promo()">Lihat Promo </button>
+       </td>
+     </tr>
+   </table>
+
+<div class="footer"> PETALS AND PERLS - Toko Aksesoris © 2026 <br> - Nayla - </div>
+
+<script>
+   function prosespemesanan(event){
+      event.preventDefault();
+	  
+	  var nama = document.getElementById("nama").value;
+	  var email = document.getElementById("email").value;
+	  var noHP  = document.getElementById("noHP").value;
+	  var paket = document.getElementById("paket").value;
+	  var alamat = document.getElementById("alamat").value;
+	  
+	  var bayar = document.getElementsByName("bayar");
+	  var metodebayar = "";
+	  
+	   for (var i=0; i<bayar.length; i++)
+	   {
+	     if (bayar[i].checked)
+		 {
+		  metodebayar = bayar[i].value;
+		 }
+	   }
+	 if (nama=="" || email=="" || noHP=="" || alamat=="")
+      {
+        alert("Semua Data Harus diisi!");
+        return false;
+      }
+
+    alert("===PESANAN BERHASIL===" +
+	       "\nNama : "+ nama +
+		   "\nEmail : "+ email +
+		   "\nNo Hp : "+ noHP +
+		   "\nMetode Pembayaran : "+ metodebayar +
+		   "\nEkspedisi : "+ paket +
+		   "\nAlamat : "+ alamat+
+		   "\n\nTerimakasih Telah Berbelanja di PETALS AND PERLS."
+		  )
+
+   document.getElementById("formpemesanan").reset();
+
+    return false;   
+	 
+	}
+	function promo(){
+      alert("Selamat! Hari Ini anda mendapatkan diskon 30% untuk seluruh item");
+  }
+</script>
+
+</body>
+</html>   
+	   
+	   
